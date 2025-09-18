@@ -17,7 +17,6 @@ body {
 /*SIDEBAR ICON*/
 .icon {
   align-items: center;
-  top: 50px;
 }
 #menu-toggle {
   display: none;
@@ -27,7 +26,6 @@ body {
   display: flex;
   flex-direction: column;
   right: 20px;
-
   cursor: pointer;
   gap: 6px;
   z-index: 1001;
@@ -133,7 +131,7 @@ main {
   text-align: justify;
 }
 #contact-page {
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   place-content: center;
@@ -144,6 +142,10 @@ main {
   text-decoration: none;
   color: white;
   padding: 10px;
+  border: 1px, solid red;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
 }
 .contact a:hover {
   transform: translateY(-3px);
