@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: black;
+  color: white;
+  font-size: large;
+}
+/*SIDEBAR ICON*/
+.icon {
+  align-items: center;
+  top: 50px;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1001;
+  color: white;
+}
+.menu-icon span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+}
+.sidebar {
+  position: fixed;
+  background-color: #333;
+  right: -400px;
+  width: 250px;
+  height: 30%;
+}
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+.sidebar a:hover {
+  transform: translateY(-3px);
+}
+#menu-toggle:checked ~ .sidebar {
+  right: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+/*-----------*/
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+header nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 15px;
+}
+header nav a:hover {
+  transform: translateY(-3px);
+}
+main {
+  padding-top: 50px;
+}
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+.intro p {
+  text-align: center;
+}
+.intro p span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.intro a input {
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(209, 35, 64);
+  display: inline-block;
+  text-align: center;
+  border-radius: 90%;
+  width: 100px;
+  height: 35px;
+  box-shadow: none;
+}
+.hire-button:hover {
+  transform: translateY(-3px);
+}
+#about-page {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+.about-page-text p {
+  text-align: justify;
+}
+#contact-page {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+.contact a {
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.contact a:hover {
+  transform: translateY(-3px);
+}
+footer {
+  margin-top: 30px;
+}
+footer p {
+  text-align: center;
+}
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 320px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header nav {
+    display: none;
+  }
+  .sidebar {
+    width: 150px;
+  }
+  .sidebar a {
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header nav {
+    display: flex;
+  }
+  .icon {
+    display: none;
+  }
+  /*   header nav {
+    display: none;
+  }
+  .sidebar {
+    width: 250px;
+  }
+  .sidebar a {
+    padding-left: 20px;
+  } */
+}
