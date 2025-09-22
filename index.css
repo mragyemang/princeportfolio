@@ -26,19 +26,19 @@ body {
   display: none;
 }
 .menu-icon {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   right: 20px;
   cursor: pointer;
-  gap: 6px;
+  gap: 1px;
   z-index: 1001;
   color: white;
 }
 .menu-icon span {
   display: block;
-  width: 30px;
-  height: 2px;
+  width: 40px;
+  height: 0.02px;
   background-color: white;
 }
 .sidebar {
@@ -78,6 +78,7 @@ header {
   justify-content: space-between;
   background-color: black;
   color: white;
+  position: fixed;
 }
 header nav {
   list-style: none;
